@@ -22,6 +22,9 @@ gem 'webpacker'
 # Foreman for initiating several processes at a time (there’ll be more about it later).
 gem 'foreman'
 
+gem 'foundation-rails'
+gem 'autoprefixer-rails'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
