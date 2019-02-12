@@ -1,0 +1,6 @@
+{
+    "tenant":"moroku",
+    "scheduled_today":<%= @roster.first.to_json.html_safe %>,
+    "roster":<%= @roster.to_json.html_safe %>,
+    "motd":"<%= @motd.html_safe %>"
+}

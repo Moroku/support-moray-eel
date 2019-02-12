@@ -1,2 +1,22 @@
-<h1>Roster#index</h1>
-<p>Find me in app/views/roster/index.html.erb</p>
+<div class="grid-x">
+  <div class="large-2 cell"></div>
+  <div class="large-8 cell">
+    <h1 class="text-center">Roster</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>From Date</th>
+            <th>To Date</th>
+        </tr>
+        <% @roster.each do |schedule| %>
+            <tr>
+                <td class="text-center"><%= schedule.name %></td>
+                <td class="text-center"><%= schedule.from_date.strftime(@date_format) %></td>
+                <td class="text-center"><%= schedule.to_date.strftime(@date_format) %></td>
+            </tr>
+        <% end %>
+    </table>
+
+  </div>
+  <div class="large-2 cell"></div>
+</div>
