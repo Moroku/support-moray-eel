@@ -1,3 +1,19 @@
 // Place all the styles related to the Roster controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$hero-height: 40vh;
+
+.hero-section {
+  background: url('https://picsum.photos/1920/1080?random') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+}

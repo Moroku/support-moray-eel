@@ -4,7 +4,7 @@ class RosterController < ApplicationController
     names = ["Bennie", "Soumya", "Evan", "Nischal"]
     make_roster(names)
 
-    @date_format = "%m-%d"
+    @date_format = "%d - %B"
 
     respond_to do |format|
       format.json { render }
