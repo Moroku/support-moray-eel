@@ -1,7 +1,7 @@
 class RosterController < ApplicationController
   before_action :set_motd
   def index
-    names = ["Bennie", "Soumya", "Evan", "Nischal"]
+    names = ["Bennie", "Soumya", "Evan", "Nischal", "Nam"]
     make_roster(names)
 
     @date_format = "%d - %B"
