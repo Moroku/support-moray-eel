@@ -2,7 +2,7 @@ class RosterController < ApplicationController
   before_action :set_motd
   def index
     names = ["Bennie", "Soumya", "Evan", "Nischal", "Nam"]
-    make_roster(names)
+    make_roster(names, params[:results])
 
     @date_format = "%d - %B"
 
@@ -13,14 +13,19 @@ class RosterController < ApplicationController
   end
 
   private
-    def make_roster(names)
+    def make_roster(names, results = nil)
       @roster = []
       len = names.length
+      results ||= len
+      results = results.to_i
+      # Don't allow more than 2 years of data
+      results = [results, 104].min
+      results = [results, 1].max
       today = Date.current
       if today.end_of_week == today then
         today = today.tomorrow.tomorrow
       end
-      names.each do |n|
+      (0...results).each do |n|
         week_num = today.strftime("%U").to_i
         x = week_num % len
         start_week = today.beginning_of_week
