@@ -2,7 +2,7 @@
   "name": "support-moray-eel",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "3.6.0",
     "jshint": "^2.10.1",
     "vue": "^2.6.5",
     "vue-loader": "14.2.2",
